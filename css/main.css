@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+.game {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #483d8b;
+}
+
+.game .score-board {
+  color: #ddd9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  font-family: sans-serif;
+  height: 20vh;
+  padding: 5vh 0;
+}
+
+.game .score-board h2 {
+  font-size: 1.8rem;
+}
+
+.game .score-board p {
+  font-size: 1.2rem;
+  padding: 1vh;
+}
+
+.game .intro {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ddd9d9;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.game .intro h1 {
+  font-size: 2.5rem;
+}
+
+.game .match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.game .match h1 {
+  font-size: 2.5rem;
+  color: #ddd9d9;
+  text-align: center;
+}
+
+.game .match .hands,
+.game .match .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game .match .hands .player-hand,
+.game .match .options .player-hand {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.intro button,
+.match button {
+  width: 140px;
+  color: #ddd9d9;
+  border: 0;
+  background-color: #2d7560;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  -webkit-transition: background-color ease-out 0.3s;
+  transition: background-color ease-out 0.3s;
+}
+
+.intro button:hover,
+.match button:hover {
+  background-color: #296150;
+}
+
+@-webkit-keyframes playerShake {
+  0% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    -webkit-transform: rotateY(180deg) translateY(-50px);
+            transform: rotateY(180deg) translateY(-50px);
+  }
+  25% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+  40% {
+    -webkit-transform: rotateY(180deg) translateY(-50px);
+            transform: rotateY(180deg) translateY(-50px);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+  60% {
+    -webkit-transform: rotateY(180deg) translateY(-50px);
+            transform: rotateY(180deg) translateY(-50px);
+  }
+  70% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    -webkit-transform: rotateY(180deg) translateY(-50px);
+            transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes playerShake {
+  0% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    -webkit-transform: rotateY(180deg) translateY(-50px);
+            transform: rotateY(180deg) translateY(-50px);
+  }
+  25% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+  40% {
+    -webkit-transform: rotateY(180deg) translateY(-50px);
+            transform: rotateY(180deg) translateY(-50px);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+  60% {
+    -webkit-transform: rotateY(180deg) translateY(-50px);
+            transform: rotateY(180deg) translateY(-50px);
+  }
+  70% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    -webkit-transform: rotateY(180deg) translateY(-50px);
+            transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg) translateY(0px);
+            transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@-webkit-keyframes computerShake {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  15% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  25% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  60% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  70% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  85% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes computerShake {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  15% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  25% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  60% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  70% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  85% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+/*# sourceMappingURL=main.css.map */
