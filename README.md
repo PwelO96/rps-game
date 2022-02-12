@@ -1,2 +1,1 @@
-# rps-game
-Rock, paper, scissors game wrote in JS
+http://pawelwebsite.cba.pl/rps-game/
